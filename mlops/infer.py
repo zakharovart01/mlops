@@ -13,7 +13,7 @@ if __name__ == "__main__":
         df["data"], df["target"], test_size=0.33, random_state=42
     )
 
-    model = load("../models/1.joblib")
+    model = load("1.joblib")
 
     model_score = model.score(X_test, y_test)
 

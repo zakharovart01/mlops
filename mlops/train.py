@@ -28,4 +28,4 @@ if __name__ == "__main__":
 
     # logging.info(f"model score: {model_score:.3f}")
 
-    dump(model, "../models/1.joblib")
+    dump(model, "1.joblib")
