@@ -15,7 +15,10 @@ if __name__ == "__main__":
 
     model = load("1.joblib")
 
+    pred = model.predict(X_test)
+
     model_score = model.score(X_test, y_test)
 
     # logging.info(f"model score: {model_score:.3f}")
-    print(model_score)
+    print('model_score =',model_score)
+    pred.tofile('pred.csv', sep = '')
