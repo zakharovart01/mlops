@@ -1,0 +1,12 @@
+md5: ee8d9ee50ac9c3ce0c927d976239eda1
+frozen: true
+deps:
+- checksum: '193332399427744755327034400165366876485'
+  size: 404368
+  hash: md5
+  path: https://docs.google.com/spreadsheets/d/1l3EBkmx0Mb5qHDLNiMwDKw6KlwvJyGpMP8V9GGbnCOE/edit#gid=397432644
+outs:
+- md5: 3a19aaa8e038e3f0a4f865369ddb6f93
+  size: 404379
+  hash: md5
+  path: edit
