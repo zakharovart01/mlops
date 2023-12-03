@@ -8,7 +8,8 @@ from hydra.core.config_store import ConfigStore
 
 
 def run_server(port):
-    command = f"mlflow models serve -p {port} -m ./models/onnx_model --env-manager=local".split(
+    command = f"mlflow models serve -p {port} \
+    -m ./models/onnx_model --env-manager=local".split(
         " "
     )
     proc = subprocess.run(command)
@@ -22,7 +23,10 @@ cs.store(name="config", group="first", node=Config)
 def main(port):
     # get model from gdrive
     with initialize(version_base="1.3", config_path="conf"):
-        cfg = compose(config_name="config", overrides=[f"infer.inference_port={port}"])
+        cfg = compose(
+            config_name="config",
+            overrides=[f"infer.inference_port={port}"],
+        )
     file = Path(cfg.model.onnx_parameters.mlflow_onnx_export_path)
     if not file.is_dir():
         subprocess.run(
