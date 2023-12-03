@@ -2,10 +2,13 @@ import logging
 
 import gspread
 import hydra
+import mlflow
 import numpy as np
 import pandas as pd
 from joblib import dump
 from oauth2client.service_account import ServiceAccountCredentials
+from skl2onnx import convert_sklearn
+from skl2onnx.common.data_types import FloatTensorType
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
@@ -20,8 +23,7 @@ def main(cfg):
         "https://www.googleapis.com/auth/drive",
     ]
     c = ServiceAccountCredentials.from_json_keyfile_name(
-        "../token.\
-    json",
+        "../token.json",
         scope,
     )
     client = gspread.authorize(c)
@@ -43,8 +45,8 @@ def main(cfg):
     logging.info(cfg)
     logging.info("--------------------------------------")
 
-    target = np.array(data["target"])
-    data = np.array(data[[str(i) for i in range(10)]])
+    target = np.array(data["target"]).astype(np.float32)
+    data = np.array(data[[str(i) for i in range(10)]]).astype(np.float32)
 
     X_train, X_test, y_train, y_test = train_test_split(
         data, target, test_size=cfg.d.t_s, random_state=cfg.d.r_s
@@ -63,6 +65,12 @@ def main(cfg):
 
     # logging.info(f"model score: {model_score:.3f}")
 
+    onnx_model = convert_sklearn(
+        model, initial_types=[("input", FloatTensorType([None, 10]))]
+    )
+    with open("model.onnx", "wb") as f:
+        f.write(onnx_model.SerializeToString())
+    mlflow.onnx.save_model(onnx_model, "onnx_model")
     dump(model, "1.joblib")
 
 

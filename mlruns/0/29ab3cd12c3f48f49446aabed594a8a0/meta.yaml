@@ -1,0 +1,15 @@
+artifact_uri: file:///home/zakhar/mlops/mlruns/0/29ab3cd12c3f48f49446aabed594a8a0/artifacts
+end_time: 1701601346989
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 29ab3cd12c3f48f49446aabed594a8a0
+run_name: upbeat-hawk-512
+run_uuid: 29ab3cd12c3f48f49446aabed594a8a0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1701601346796
+status: 3
+tags: []
+user_id: zakhar

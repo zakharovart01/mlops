@@ -1,0 +1,15 @@
+artifact_uri: file:///home/zakhar/mlops/mlruns/0/b8bd3b49939840aaacd0abd8b17fafc4/artifacts
+end_time: 1701600150845
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b8bd3b49939840aaacd0abd8b17fafc4
+run_name: awesome-dove-805
+run_uuid: b8bd3b49939840aaacd0abd8b17fafc4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1701600149855
+status: 3
+tags: []
+user_id: zakhar

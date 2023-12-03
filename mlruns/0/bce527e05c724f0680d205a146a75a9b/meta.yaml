@@ -1,0 +1,15 @@
+artifact_uri: file:///home/zakhar/mlops/mlruns/0/bce527e05c724f0680d205a146a75a9b/artifacts
+end_time: 1701598886394
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bce527e05c724f0680d205a146a75a9b
+run_name: nervous-skunk-646
+run_uuid: bce527e05c724f0680d205a146a75a9b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1701598886227
+status: 3
+tags: []
+user_id: zakhar

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/zakhar/mlops/mlruns/0/59600e0395214fe2ae3306a4cb8582c5/artifacts
+end_time: 1701601621868
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 59600e0395214fe2ae3306a4cb8582c5
+run_name: beautiful-goose-425
+run_uuid: 59600e0395214fe2ae3306a4cb8582c5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1701601621842
+status: 3
+tags: []
+user_id: zakhar

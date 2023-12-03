@@ -1,0 +1,15 @@
+artifact_uri: file:///home/zakhar/mlops/mlruns/0/8b9d3237b6394316a06d9b8b99ebf6a1/artifacts
+end_time: 1701600262828
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8b9d3237b6394316a06d9b8b99ebf6a1
+run_name: languid-cow-889
+run_uuid: 8b9d3237b6394316a06d9b8b99ebf6a1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1701600262630
+status: 3
+tags: []
+user_id: zakhar
