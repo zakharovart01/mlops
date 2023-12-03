@@ -23,7 +23,7 @@ def main(cfg):
         "https://www.googleapis.com/auth/drive",
     ]
     c = ServiceAccountCredentials.from_json_keyfile_name(
-        "../token.json",
+        "token.json",
         scope,
     )
     client = gspread.authorize(c)
